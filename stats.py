@@ -11,3 +11,8 @@ def characters_count(bookcontent):
         else:
             uniqueChar[char] = 1
     return uniqueChar
+
+def sort(chardict):
+    chartuples = sorted(chardict.items(), key=lambda item: item[1], reverse=True)
+    out = [{k: v} for k,v in chartuples]
+    return out
